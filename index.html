@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PeliFlix</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+    <!-- fuentes Montserrat-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/ranking.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/search.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <script defer src="js/app.js"></script>
+    <script defer src="js/ranking.js"></script>
+    <script defer src="js/search.js"></script>
+    <script defer src="js/about.js"></script>
+  </head>
+  <body>
+    <header class="topheader">
+      <nav class="topnav">
+        <a href="#" class="logo">
+          <img height="50" width="50" src="img/movies-podcast.png" alt="imagen logo" />
+          <div class="logotype">
+            PELIFLIX<br />
+            Tu sitio de película
+          </div>
+        </a>
+        <button class="open-menu" aria-label="Abrir menú">
+          <img src="img/icons-menu.svg" alt="abrir menú" />
+        </button>
+        <ul class="menu">
+          <li>
+            <button class="close-menu" aria-label="Cerrar menú">
+              <img src="img/icons-close.svg" alt="cerrar menú" />
+            </button>
+          </li>
+          <li><a href="#home" class="selected">Inicio</a></li>
+          <li><a href="#ranking">Ranking</a></li>
+          <li><a href="#about">Acerca de</a></li>
+          <li><a href="#contact">Contacto</a></li>
+          
+          <li>
+            <form id="form">
+              <input
+                type="text"
+                placeholder="Buscar"
+                id="searchbox"
+                class="searchbox"
+              />
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="horizontal-padding vertical-padding">
+      <section class="home" id="home">
+        <div>
+          <h1 class="home-title">Inicio</h1>
+        </div>
+      </section>
+    </div>
+
+    <div class="horizontal-padding vertical-padding">
+      <section class="ranking" id="ranking">
+        <div>
+          <h1 class="ranking-title">Ranking</h1>
+          
+        </div>
+      </section>
+    </div>
+
+    <div class="horizontal-padding vertical-padding">
+      <section class="about" id="about">
+        <h1 class="about-title">Acerca de</h1>
+        
+
+      </div>
+      </section>
+    </div>
+
+    <div class="horizontal-padding vertical-padding">
+      <section class="contact" id="contact">
+        <h1 class="conctact-title">Contacto</h1>
+        
+      </section>
+    </div>
+
+    <div class="horizontal-padding vertical-padding">
+      <section class="search" id="search">
+        <h1 class="search-title">Buscar</h1>
+      </section>
+    </div>
+  </body>
+</html>
