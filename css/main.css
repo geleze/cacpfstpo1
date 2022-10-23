@@ -12,21 +12,32 @@
   --error-color: yellow;
 }
 
-body {
-	background: var(--theme-color);
-	font-family: 'Open Sans', sans-serif;
+/*dado que el navbar es fijo, se agrega un margen para que se pueda ver cada sección completa*/
+section[id] {
+  scroll-margin-top: 75px;
+  border: 4px solid black;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+	background: var(--theme-color);
+	font-family: 'Open Sans', sans-serif;
+  padding-top: 75px;
+}
 
 a {
   text-decoration: none; /* quita subrayado */
   color: var(--text-color); /*fuerza color del enlace */
 }
 
-/*dado que el navbar es fijo, se agrega un margen para que se pueda ver cada sección completa*/
-section[id] {
-  scroll-margin-top: 70px;
-  border: 4px solid black;
+.horizontal-padding {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.vertical-padding {
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .section-title h3 {
@@ -34,7 +45,7 @@ section[id] {
 	font-size: 30px;
 }
 
-.contenedor {
+.container {
 	width: 90%;
 	margin: auto;
 }
@@ -55,7 +66,6 @@ section[id] {
 
 .form-control small {
   color: var(--error-color);
-/*   position: absolute; */
   bottom: 0;
   left: 0;
   visibility: hidden;

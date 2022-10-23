@@ -1,0 +1,91 @@
+/* 1280x800 */
+@media (max-width: 1280px) {
+  .pre-btn,
+  .nxt-btn {
+    width: 7vw;
+  }
+  .movie {
+    width: 275px;
+  }
+
+  .main-movie .description {
+    max-width: 60%;
+  }
+
+  .horizontal-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .vertical-padding {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .dots .dot {
+    margin: 4px;
+  }
+}
+
+/* 768x1024 */
+@media (max-width: 768px) {
+  .pre-btn,
+  .nxt-btn {
+    width: 9vw;
+  }
+  .movie {
+    width: 300px;
+  }
+
+  .main-movie .description {
+    max-width: 85%;
+  }
+
+  .horizontal-padding {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .vertical-padding {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .dots .dot {
+    margin: 3px;
+  }
+}
+
+/* 412 x 915*/
+@media (max-width: 412px) {
+  .pre-btn,
+  .nxt-btn {
+    width: 11vw;
+  }
+  .movie {
+    width: 350px;
+  }
+
+  .main-movie .description {
+    max-width: 100%;
+  }
+
+  .horizontal-padding {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .vertical-padding {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  iframe {
+    width: 360px;
+    height: 200px;
+  }
+
+  .dots .dot {
+    margin: 1px;
+  }
+}

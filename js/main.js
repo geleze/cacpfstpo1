@@ -42,7 +42,7 @@ function getVotingColor(vote) {
   }
 }
 
-const carouselContainers = [...document.querySelectorAll('.product-container')];
+const carouselContainers = [...document.querySelectorAll('.carousel-container')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
 const preBtn = [...document.querySelectorAll('.pre-btn')];
 

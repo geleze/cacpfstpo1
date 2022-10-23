@@ -1,5 +1,5 @@
 /* ---- ----- ----- Pelicula Principal ----- ----- ----- */
-.pelicula-principal {
+.main-movie {
 	font-size: 16px;
 	min-height: 40.62em;
 	color: var(--theme-color-inverse);
@@ -11,18 +11,18 @@
 	background-repeat: no-repeat;
 }
 
-.pelicula-principal .contenedor {
+.main-movie .container {
 	margin: 0 auto;
 	margin-bottom: 6.25em;
 }
 
-.pelicula-principal .titulo {
+.main-movie .title {
 	font-weight: 600;
 	font-size: 3.12em;
 	margin-bottom: 0.4em;
 }
 
-.pelicula-principal .descripcion {
+.main-movie .description {
 	font-weight: normal;
 	font-size: 1em;
 	line-height: 1.75em;
@@ -30,7 +30,7 @@
 	margin-bottom: 1.25em;
 }
 
-.pelicula-principal .boton {
+.main-movie .boton {
 	background: var(--lighted-color);
 	border: none;
 	border-radius: 0.31em;
@@ -42,16 +42,16 @@
 	font-size: 1.12em;
 }
 
-.pelicula-principal .boton:hover {
+.main-movie .boton:hover {
 	background: var(--primary-color);
 	color: var(--lighted-color);
 }
 
-.pelicula-principal .boton i {
+.main-movie .boton i {
 	margin-right: 1.25em;
 }
 
-.pelicula-principal .volanta {
+.main-movie .volanta {
 	color: var(--primary-color);
 }
 
@@ -96,16 +96,3 @@
 .play-card-button i {
 	margin-right: 1.25em;
 }
-
-
-/* .know-more{
-    background-color: var(--primary-color);
-    color:var(--lighted-color);
-    font-size: 16px;
-    font-weight: bold;
-    border:0;
-    border-radius: 50px;
-    padding: 10px 20px;
-    margin-top: 5px;
-} */
-

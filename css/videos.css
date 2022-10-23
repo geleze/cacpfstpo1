@@ -40,8 +40,8 @@
   /* Position the close button (top right corner) */
   .overlay .closebtn {
     position: absolute;
-    top: 5%;
-    right: 45px;
+    top: 50px;
+    right: 47%;
     font-size: 60px;
   }
   
@@ -54,7 +54,6 @@
       right: 35px;
     }
   }
-
 
   .embed.hide{
       display: none;

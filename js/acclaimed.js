@@ -21,6 +21,10 @@ async function showMostAcclaimedMovies() {
         </div>
     `;
     container.appendChild(movieEl);
+
+    document.getElementById(id).addEventListener('click', () => {
+      openNav(movie)
+    })
   });
 }
 

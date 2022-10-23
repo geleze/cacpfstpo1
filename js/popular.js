@@ -55,7 +55,13 @@ async function showTrendingMovies() {
       </div>
   `;
       container.appendChild(movieEl);
+
+      document.getElementById(id).addEventListener('click', () => {
+        openNav(movie)
+      })
     });
+
+
   }
   
   showTrendingMovies();
