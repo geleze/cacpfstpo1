@@ -3,19 +3,17 @@ const IMG_URL = "https://image.tmdb.org/t/p/w500";
 const LANG = "&language=es-AR";
 const API_KEY = "api_key=1cf50e6248dc270629e802686245c2c8";
 
-// lists
+// *** API Rest Services
+//Popular
+//https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=1cf50e6248dc270629e802686245c2c8&language=es-AR
 const POPULARITY_API_URL = BASE_URL + "discover/movie?sort_by=popularity.desc&" + API_KEY + LANG;
+//Trending
+//https://api.themoviedb.org/3/trending/movie/week?api_key=1cf50e6248dc270629e802686245c2c8&language=es-AR
 const TRENDING_WEEK_API_URL = BASE_URL + "trending/movie/week?" + API_KEY + LANG;
+//Aclaimed
+//https://api.themoviedb.org/3/movie/top_rated?api_key=1cf50e6248dc270629e802686245c2c8&language=es-AR&page=1
 const TOP_RATED_API_URL = BASE_URL +"movie/top_rated?" + API_KEY + LANG + "&page=1";
 
-const searchURL = BASE_URL + "/search/movie?" + API_KEY;
-
-//popular
-//https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=1cf50e6248dc270629e802686245c2c8&language=es-AR
-//trending
-//https://api.themoviedb.org/3/trending/movie/week?api_key=1cf50e6248dc270629e802686245c2c8&language=es-AR
-//aclaimed
-//https://api.themoviedb.org/3/movie/top_rated?api_key=1cf50e6248dc270629e802686245c2c8&language=es-AR&page=1
 
 const ERROR_KEY = "ERROR";
 
@@ -73,7 +71,7 @@ function openNav(movie) {
           let {name, key, site} = video
 
           if(site == 'YouTube'){
-              
+        
             embed.push(`
               <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" title="${name}" class="embed hide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           

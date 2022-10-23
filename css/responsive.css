@@ -105,6 +105,8 @@
 /* Cambios por sección*/
 
 @media (min-width: 950px) {
+  .subscribe,
+  .subscribe-area,
   .contact {
     font-size: 20px;
     padding: 70px;

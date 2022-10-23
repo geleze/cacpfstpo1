@@ -4,7 +4,7 @@
   --theme-color-light: rgb(30, 28, 28);
   --theme-color-inverse: var(--lighted-color);
   --primary-color: red;
-  --text-color: var(--lighted-color);
+  --text-color: white;
   --text-color-inverse: black;
   --navbar-shallow-color: #232222;
   --menu-mobile-background-color: #3a4460;
@@ -41,7 +41,7 @@ a {
 }
 
 .section-title h3 {
-	color: #fff;
+	color: var(--text-color);
 	font-size: 30px;
 }
 

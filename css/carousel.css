@@ -88,7 +88,7 @@
 }
 
 .no-results{
-  color:white;
+  color: var(--text-color);
 }
 
 .pre-btn,

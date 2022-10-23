@@ -14,6 +14,9 @@ document.getElementById("subscribe-form").addEventListener("submit", function (e
       setTimeout(() => {
           subscribeEmail.value = '';
       }, 2000);
+
+
+      
     } else {
       errorSubmit.style.display = 'block';
     }
