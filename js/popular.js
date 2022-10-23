@@ -1,20 +1,62 @@
 async function showMostPopularMovies() {
+  const container = document.getElementById("popular-container");
   const datos = await getJsonFromAPI(POPULARITY_API_URL);
-  let peliculasDivs = "";
-  datos.results.forEach((pelicula) => {
-    /*       peliculas += `
-                          <div class="pelicula">
-                              <img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}">
-                              <h3 class="titulo">${pelicula.title}</h3>
-                          </div>
-                      `; */
-    peliculasDivs += `
-                      <div class="pelicula">
-                          <a href="#"><img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt=""></a>
-                      </div>
-                  `;
+  datos.results.forEach((movie) => {
+    const { title, poster_path, vote_average, overview, id } = movie;
+    const movieEl = document.createElement("div");
+    movieEl.classList.add("movie");
+    movieEl.innerHTML = /*html*/
+    `
+        <img src="${IMG_URL + poster_path}" alt="${title}">
+        <div class="movie-info">
+            <h3>${title}</h3>
+            <span class="${getVotingColor(vote_average)}">${vote_average}</span>
+        </div>
+        <div class="overview">
+            <h3>Overview</h3>
+            ${overview}
+            <br/> 
+            <button class="play-card-button" id="${id}"><i class="fas fa-play"></i>Reproducir</button>
+        </div>
+    `;
+    container.appendChild(movieEl);
+
+    document.getElementById(id).addEventListener('click', () => {
+      openNav(movie)
+    })
+
   });
-  document.getElementById("popular-carousel").innerHTML = peliculasDivs;
 }
 
+
+
 showMostPopularMovies();
+
+async function showTrendingMovies() {
+    const container = document.getElementById("trending-container");
+    const datos = await getJsonFromAPI(TRENDING_WEEK_API_URL);
+    datos.results.forEach((movie) => {
+      const { title, poster_path, vote_average, overview, id } = movie;
+      const rounded_vote_average=Number(vote_average.toFixed(1));
+      const movieEl = document.createElement("div");
+      movieEl.classList.add("movie");
+      movieEl.innerHTML = /*html*/ 
+      `
+      <img src="${IMG_URL + poster_path}" alt="${title}">
+      <div class="movie-info">
+          <h3>${title}</h3>
+          <span class="${getVotingColor(vote_average)}">${rounded_vote_average}</span>
+      </div>
+      <div class="overview">
+          <h3>Overview</h3>
+          ${overview}
+          <br/> 
+          <button class="play-card-button" id="${id}"><i class="fas fa-play"></i>Reproducir</button>
+      </div>
+  `;
+      container.appendChild(movieEl);
+    });
+  }
+  
+  showTrendingMovies();
+

@@ -1,157 +1,246 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PeliFlix</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
 
-    <!-- fuentes Montserrat-->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- fuentes Bebas Neue y Open Sans-->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
-    
-    <link
-      rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
-    />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/popular.css" />
-    <link rel="stylesheet" href="css/acclaimed.css" />
-    <link rel="stylesheet" href="css/contact.css" />
-    <link rel="stylesheet" href="css/search.css" />
-    <script defer src="js/main.js"></script>
-    <script defer src="js/navbar.js"></script>
-    <script defer src="js/home.js"></script>
-    <script defer src="js/popular.js"></script>
-    <script defer src="js/acclaimed.js"></script>
-    <script defer src="js/contact.js"></script>
-    <script defer src="js/search.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PeliFlix</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
 
-    <!-- iconos -->
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  <!-- fuentes Montserrat-->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- fuentes Bebas Neue y Open Sans-->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
 
-  </head>
-  <body>
-    <header class="topheader">
-      <nav class="topnav">
-        <a href="#" class="logo">
-          <img height="50" width="50" src="img/logo2.png" alt="imagen logo" />
-          <div class="logotype">
-            PELIFLIX
-          </div>
-        </a>
-        <button class="open-menu" aria-label="Abrir menú">
-          <img src="img/icons-menu.svg" alt="abrir menú" />
-        </button>
-        <ul class="menu">
-          <li>
-            <button class="close-menu" aria-label="Cerrar menú">
-              <img src="img/icons-close.svg" alt="cerrar menú" />
-            </button>
-          </li>
-          <li><a href="#home" class="selected">Inicio</a></li>
-          <li><a href="#popular">Populares</a></li>
-          <li><a href="#acclaimed">Aclamadas</a></li>
-          <li><a href="#contact">Contacto</a></li>
-          <li>
-            <form id="form">
-              <input
-                type="text"
-                placeholder="Buscar"
-                id="searchbox"
-                class="searchbox"
-              />
-            </form>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <!-- iconos -->
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
-    <!-- Home Section -->
-    <div class="horizontal-padding vertical-padding">
-      <section class="home" id="home">
-        <div class="pelicula-principal">
-          <div class="contenedor">
-            <h2 class="volanta"> Lo mas visto hoy</h2>
-            <h3 class="titulo"></h3>
-            <p class="descripcion"></p>
-            <button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button>
-            <button role="button" class="boton"><i class="fas fa-info-circle"></i>Más información</button>
-          </div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/popular.css" />
+  <link rel="stylesheet" href="css/acclaimed.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/search.css" />
+  <link rel="stylesheet" href="css/carousel.css" />
+  <link rel="stylesheet" href="css/subscribe.css" />
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/videos.css">
+
+
+
+</head>
+
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content" id="overlay-content"></div>
+
+  <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow">&#8656;</a>
+
+  <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow">&#8658;</a>
+
+</div>
+
+
+<body>
+  <header class="topheader">
+    <nav class="topnav">
+      <a href="#" class="logo">
+        <img height="50" width="50" src="img/logo2.png" alt="imagen logo" />
+        <div class="logotype">
+          PELIFLIX
         </div>
-      </section>
-    </div>
+      </a>
+      <button class="open-menu" aria-label="Abrir menú">
+        <img src="img/icons8-menu.svg" alt="abrir menú" />
+      </button>
+      <ul class="menu">
+        <li>
+          <button class="close-menu" aria-label="Cerrar menú">
+            <img src="img/icons8-close-32.svg" alt="cerrar menú" />
+          </button>
+        </li>
+        <li><a href="#home" class="selected">Inicio</a></li>
+        <li><a href="#popular">Populares</a></li>
+        <li><a href="#trending">Tendencia</a></li>
+        <li><a href="#acclaimed">Aclamadas</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#subscribe">Suscripción</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Popular Section -->
-    <div class="horizontal-padding vertical-padding">
-      <section class="popular" id="popular">
-        <div class="peliculas-recomendadas contenedor">
-          <div class="section-title">
-            <h3>Las mas populares</h3>
-          </div>
-
-          <div class="contenedor-principal">
-            <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-            
-            <div class="contenedor-carousel">
-              <div class="carousel" id="popular-carousel">
-                
-              </div>
-            </div>
-
-            <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
-          </div>
+  <!-- Home Section -->
+  <div class="horizontal-padding vertical-padding">
+    <section class="home" id="home">
+      <div class="pelicula-principal">
+        <div class="contenedor">
+          <h2 class="volanta"> Lo mas visto hoy</h2>
+          <h3 class="titulo"></h3>
+          <p class="descripcion"></p>
+          <button role="button" class="play-button" id="pelicula-principal-play"><i
+              class="fas fa-play"></i>Reproducir</button>
         </div>
-      </section>
-    </div>
-
-    <!-- Acclaimed Section -->
-    <div class="horizontal-padding vertical-padding">
-      <section class="acclaimed" id="acclaimed">
-        <div class="section-title">
-          <h3>Las mejores calificadas</h3>
-        </div>
-        <div class="section-container" id="acclaimed-container">
-
-        </div>       
       </div>
-      </section>
-    </div>
+    </section>
+  </div>
 
-    <!-- Contact Section -->
-    <div class="horizontal-padding vertical-padding">
-      <section class="contact" id="contact">
-        <h1 class="conctact-title">Contacto</h1>
-        
-      </section>
-    </div>
+  <!-- Popular Section -->
+  <div class="horizontal-padding vertical-padding">
+    <section class="section" id="popular">
+      <h2 class="section-category">Las mas populares...</h2>
+      <button class="pre-btn"><img src="img/double-right-arrows.png" alt=""></button>
+      <button class="nxt-btn"><img src="img/double-right-arrows.png" alt=""></button>
+      <div class="product-container" id="popular-container">
 
-    <div class="horizontal-padding vertical-padding">
-      <section class="search" id="search">
-        <h1 class="search-title">Buscar</h1>
-        
-        <div id="tags"></div>
-        <div id="myNav" class="overlay">
-    
-            <!-- Button to close the overlay navigation -->
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          
-            <!-- Overlay content -->
-            <div class="overlay-content" id="overlay-content"></div>
-            
-            <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow">&#8656;</a> 
-            
-            <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow" >&#8658;</a>
-    
+      </div>
+
+    </section>
+  </div>
+
+  <!-- Trending Section -->
+  <div class="horizontal-padding vertical-padding">
+    <section class="section" id="trending">
+      <h2 class="section-category">Son tendencia en la última semana...</h2>
+      <button class="pre-btn"><img src="img/double-right-arrows.png" alt=""></button>
+      <button class="nxt-btn"><img src="img/double-right-arrows.png" alt=""></button>
+      <div class="product-container" id="trending-container">
+
+      </div>
+
+    </section>
+  </div>
+
+  <!-- Acclaimed Section -->
+  <div class="horizontal-padding vertical-padding">
+    <section class="section" id="acclaimed">
+      <h2 class="section-category">Aclamadas por la crítica...</h2>
+      <button class="pre-btn"><img src="img/double-right-arrows.png" alt=""></button>
+      <button class="nxt-btn"><img src="img/double-right-arrows.png" alt=""></button>
+      <div class="product-container" id="acclaimed-container">
+
+      </div>
+    </section>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="horizontal-padding vertical-padding">
+    <section class="contact" id="contact">
+      <h2 class="section-category">Contacto</h2>
+      <div class="contact-details">
+        <div class="contact-details-group">
+          <p class="contact-label">Dirección:</p>
+          <p class="contact-text">Ciudad Autónoma de Buenoas Aires, Argentina</p>
         </div>
-        <main id="main"></main>
-      </section>
+        <div class="contact-details-group">
+          <p class="contact-label">Email:</p>
+          <p class="contact-text">info@peliflix.com.ar</p>
+        </div>
+        <div class="contact-details-group">
+          <p class="contact-text">
+            Deje su mensaje y con gusto le responderemos
+          </p>
+        </div>
+      </div>
+      <form class="contact-form" id="contact-form" name="contact">
+        <div class="form-control">
+          <label for="contact-name">Nombre</label>
+          <input  type="text" name="contact-name" id="contact-name" placeholder="Ingrese su nombre"/>
+          <small>Error Message</small>
+        </div>
+        <div class="form-control">
+          <label for="contact-email">Email</label>
+          <input   name="contact-email" id="contact-email" placeholder="Ingrese tu email" />
+          <small>Error Message</small>
+        </div>
+        <div class="form-control">
+          <label for="contact-message">Mensaje</label>
+          <textarea  name="contact-message" id="contact-message" placeholder="Ingrese el mensaje" rows="6"></textarea>
+          <small>Error Message</small>
+        </div>
+        <button type="submit" class="form-submit" id="contact-submit">Enviar</button>
+        <div class="submit-message">
+          <div class="success" id="contact-submit-success">Hemos recibido tu mensaje! ya estás suscripto!</div>
+          <div class="error" id="contact-submit-error">Formulario no enviado</div>
+        </div>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <!-- Subscribe Section -->
+  <div class="horizontal-padding vertical-padding">
+    <section class="subscribe-area" id="subscribe">
+      <div class="container">
+        <div class="subscribe">
+          <h4>Todas las novedades</h4>
+          <p>Mantenete al tanto de las últimas noticias del mundo del cine.</p>
+          <form class="subscribe-form" id="subscribe-form">
+            <div class="form-control">
+              <input name="subscribe-email" id="subscribe-email" type="text" placeholder="Ingrese tu email" />
+              <small>Error Message</small>
+              <!-- <input type="submit" value="Suscribite"> -->
+              <button type="submit" class="form-submit" id="subscribe-submit">Suscribirse</button>
+            </div>
+            <div class="submit-message">
+              <div class="success" id="subscribe-submit-success">Felicitaciones! ya estás suscripto!</div>
+              <div class="error"   id="subscribe-submit-error">Formulario no enviado</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="#">Nuestros servicios</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Versión Premium</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="#">Preguntas frecuentes</a></li>
+            <li><a href="#">Estado de contratación</a></li>
+            <li><a href="#">Cancelación de Suscripción</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Seguinos</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
-  </body>
+  </footer>
+
+
+  <!-- javascript code-->
+  <script defer src="js/main.js"></script>
+  <script defer src="js/navbar.js"></script>
+  <script defer src="js/videos.js"></script>
+  <script defer src="js/home.js"></script>
+  <script defer src="js/popular.js"></script>
+  <script defer src="js/acclaimed.js"></script>
+  <script defer src="js/contact.js"></script>
+  <script defer src="js/subscribe.js"></script>
+</body>
+
 </html>

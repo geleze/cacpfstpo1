@@ -1,21 +1,16 @@
 :root {
+  --lighted-color: white;
   --theme-color: black;
   --theme-color-light: rgb(30, 28, 28);
-  --theme-color-inverse: white;
+  --theme-color-inverse: var(--lighted-color);
   --primary-color: red;
-  --secondary-color: #f7c331;
-  --text-color: white;
+  --text-color: var(--lighted-color);
   --text-color-inverse: black;
   --navbar-shallow-color: #232222;
   --menu-mobile-background-color: #3a4460;
+  --success-color: #23cc71;
+  --error-color: yellow;
 }
-
-/* body {	
-  font-family: 'Open Sans', sans-serif;
-  background-color: var(--theme-color);
-  color: var(--text-color);
-  padding-top: 70px;
-} */
 
 body {
 	background: var(--theme-color);
@@ -24,7 +19,7 @@ body {
 
 
 a {
-  text-decoration: none; /* quita subrayado> */
+  text-decoration: none; /* quita subrayado */
   color: var(--text-color); /*fuerza color del enlace */
 }
 
@@ -43,3 +38,46 @@ section[id] {
 	width: 90%;
 	margin: auto;
 }
+
+/*validación de formularios*/
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+/*   position: absolute; */
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.submit-message .success{
+  font-size: 80%;
+  color: green;
+  position: absolute;
+  animation: buttons .3s linear;
+  display: none;
+}
+.submit-message .error{
+  font-size:80%;
+  color: var(--error-color);
+  position: absolute;
+  transition: .3s;
+  animation: buttons .3s linear;
+  display: none;
+}
+/* FIn validación de formularios*/

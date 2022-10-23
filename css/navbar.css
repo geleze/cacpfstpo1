@@ -54,7 +54,7 @@
 .menu a::after {
   /* pseudo selector */
   content: "";
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   position: absolute;
   left: 0;
   top: calc(100% + 4px);
@@ -164,6 +164,6 @@ header .logotipo {
 
   .menu a:hover,
   .menu a.selected {
-    color: var(--secondary-color);
+    color: var(--lighted-color);
   }
 }

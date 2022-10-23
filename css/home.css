@@ -31,11 +31,11 @@
 }
 
 .pelicula-principal .boton {
-	background: rgba(0,0,0, 0.5);
+	background: var(--lighted-color);
 	border: none;
 	border-radius: 0.31em;
 	padding: 0.93em 1.87em;
-	color: #fff;
+	color: var(--text-color-inverse);
 	margin-right: 1.25em;
 	cursor: pointer;
 	transition: .3s ease all;
@@ -43,8 +43,8 @@
 }
 
 .pelicula-principal .boton:hover {
-	background: #fff;
-	color: #000;
+	background: var(--primary-color);
+	color: var(--lighted-color);
 }
 
 .pelicula-principal .boton i {
@@ -54,3 +54,58 @@
 .pelicula-principal .volanta {
 	color: var(--primary-color);
 }
+
+.play-button {
+	background: var(--lighted-color);
+	color: var(--text-color-inverse);
+	border: none;
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+}
+
+.play-button:hover {
+	background: var(--primary-color);
+	color: var(--lighted-color);
+}
+
+.play-button i {
+	margin-right: 1.25em;
+}
+
+.play-card-button{
+	background-color: var(--lighted-color);
+	color: var(--text-color-inverse);
+	border: none;
+	border-radius: 0.31em;
+	padding: 10px 20px;
+	/* margin-right: 1.25em; */
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 16px;
+}
+
+.play-card-button:hover {
+	background: var(--primary-color);
+	color: var(--lighted-color);
+}
+
+.play-card-button i {
+	margin-right: 1.25em;
+}
+
+
+/* .know-more{
+    background-color: var(--primary-color);
+    color:var(--lighted-color);
+    font-size: 16px;
+    font-weight: bold;
+    border:0;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-top: 5px;
+} */
+
