@@ -95,75 +95,9 @@ header .logotipo {
 	font-size: 40px;
 }
 
-
-
-
 header .logotipo {
 	font-family: 'Bebas Neue', cursive;
 	font-weight: normal;
 	color: var(--rojo);
 	font-size: 40px;
-}
-
-@media (max-width: 950px) {
-  /* comportamiento para menos de 950px */
-  /* Menu */
-  .menu {
-    flex-direction: column; /* se muestra en columnas y no en fila */
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    align-items: center;
-    background-color: var(--menu-mobile-background-color);
-    height: 100%;
-    overflow-y: auto;
-
-    opacity: 0;
-    pointer-events: none; /* que no se puedan usar si no están visibles */
-    transition: opacity 0.3s; /* efecto de transición */
-  }
-
-  .menu li {
-    padding: 0;
-  }
-
-  .menu a {
-    color: var(--text-color-inverse);
-    line-height: 70px;
-    font-size: 25px;
-  }
-
-  .open-menu,
-  .close-menu {
-    display: block;
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
-
-  .close-menu {
-    align-self: flex-end;
-    padding: 20px 15px;
-  }
-
-  .menu_opened {
-    /*cuando el menú está abierto*/
-    opacity: 1;
-    pointer-events: all;
-  }
-
-  .open-menu:focus:not(:focus-visible), /* si el foco no es por el tabulador, que no muestre el recuadro*/
-    .close-menu:focus:not(:focus-visible) {
-    outline: none;
-  }
-
-  .menu a::after {
-    content: none;
-  }
-
-  .menu a:hover,
-  .menu a.selected {
-    color: var(--lighted-color);
-  }
 }

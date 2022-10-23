@@ -54,10 +54,15 @@
   .dots .dot {
     margin: 3px;
   }
+
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
 }
 
 /* 412 x 915*/
-@media (max-width: 412px) {
+@media (max-width: 480px) {
   .pre-btn,
   .nxt-btn {
     width: 11vw;
@@ -87,5 +92,133 @@
 
   .dots .dot {
     margin: 1px;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+
+/* Cambios por sección*/
+
+@media (min-width: 950px) {
+  .contact {
+    font-size: 20px;
+    padding: 70px;
+
+    max-width: 980px;
+    margin: 0 auto;
+
+    box-sizing: border-box;
+  }
+
+  .contact-title {
+    font-size: 35px;
+    text-align: left;
+  }
+
+  .social-list {
+    justify-content: flex-start;
+  }
+
+  .social-list img {
+    height: 35px;
+  }
+
+  .contact-title {
+    grid-area: title;
+  }
+
+  .contact-details {
+    grid-area: details;
+  }
+
+  .contact-form {
+    grid-area: form;
+  }
+
+  .social {
+    grid-area: social;
+  }
+
+  .contact {
+    display: grid;
+    grid:
+      "title   form" auto
+      "details form" 1fr
+      "social  form" auto /
+      1fr 1fr;
+    align-items: start;
+  }
+}
+
+@media (max-width: 950px) {
+  /* comportamiento para menos de 950px */
+  /* Menu */
+  .menu {
+    flex-direction: column; /* se muestra en columnas y no en fila */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    background-color: var(--menu-mobile-background-color);
+    height: 100%;
+    overflow-y: auto;
+
+    opacity: 0;
+    pointer-events: none; /* que no se puedan usar si no están visibles */
+    transition: opacity 0.3s; /* efecto de transición */
+  }
+
+  .menu li {
+    padding: 0;
+  }
+
+  .menu a {
+    color: var(--text-color-inverse);
+    line-height: 70px;
+    font-size: 25px;
+  }
+
+  .open-menu,
+  .close-menu {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .close-menu {
+    align-self: flex-end;
+    padding: 20px 15px;
+  }
+
+  .menu_opened {
+    /*cuando el menú está abierto*/
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .open-menu:focus:not(:focus-visible), /* si el foco no es por el tabulador, que no muestre el recuadro*/
+    .close-menu:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  .menu a::after {
+    content: none;
+  }
+
+  .menu a:hover,
+  .menu a.selected {
+    color: var(--lighted-color);
   }
 }
